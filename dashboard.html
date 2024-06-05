@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gacoan's Delivery Keranjang</title>
+    <link rel="stylesheet" href="styleAdmin.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link href="path/to/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+
+<div class="container">
+    <div class="navigation">
+        <ul>
+            <li>
+                <a href="#">
+                    <span class="icon">
+                        <ion-icon name="fast-food"></ion-icon>
+                    </span>
+                    <span class="tittle">Gacoan</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="dashboard.html">
+                    <span class="icon">
+                        <ion-icon name="home-outline"></ion-icon>
+                    </span>
+                    <span class="tittle">Dashboard</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <span class="icon">
+                        <ion-icon name="people-outline"></ion-icon>
+                    </span>
+                    <span class="tittle">Customer</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <span class="icon">
+                        <ion-icon name="laptop-outline"></ion-icon>
+                    </span>
+                    <span class="tittle">Article</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <span class="icon">
+                        <i class='bx bx-bowl-hot'></i>
+                    </span>
+                    <span class="tittle">Product</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="transaction.html">
+                    <span class="icon">
+                        <ion-icon name="receipt-outline"></ion-icon>
+                    </span>
+                    <span class="tittle">Transaction</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- main -->
+    <div class="main">
+        <div class="topbar">
+            <div class="toggle">
+                <ion-icon name="menu"></ion-icon>
+            </div>
+            <div class="search">
+                <label>
+                    <input type="text" placeholder="Search here">
+                    <ion-icon name="search-circle-outline"></ion-icon>
+                </label>
+            </div>
+            <div class="user">
+                <img src="fai.jpg" alt="">
+            </div>
+        </div>
+
+        <!-- Cards -->
+        <div class="cardBox">
+            <a href="#">
+                <div class="card">
+                    <div>
+                        <div class="numbers">1,504</div>
+                        <div class="cardName">User</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="person-add-outline"></ion-icon>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="card">
+
+                    <div>
+                        <div class="numbers">1,504</div>
+                        <div class="cardName">Product</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="bag-check-outline"></ion-icon>
+                    </div>
+                </div>
+            </a>
+
+
+            <a href="transaction.html">
+                <div class="card">
+                    <div>
+                        <div class="numbers">1,504</div>
+                        <div class="cardName">Transaction</div>
+                    </div>
+                    <div class="iconBx">
+                        <ion-icon name="wallet-outline"></ion-icon>
+                    </div>
+                </div>
+            </a>
+
+        </div> <!-- end card -->
+
+        <!-- order -->
+        <div class="details">
+            <div class="recentOrders">
+                <div class="cardHeader">
+                    <h2>Recent Orders</h2>
+                    <a href="transaction.html" class="btn">View All</a>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Name</td>
+                            <td>Price</td>
+                            <td>Quantity</td>
+                            <td>Payment</td>
+                            <td>Status</td>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Udang Keju</td>
+                            <td>Rp 13.789</td>
+                            <td>3</td>
+                            <td>Paid</td>
+                            <td><span class="status delivered">Delivered</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>Udang Rambutan</td>
+                            <td>Rp 13.789</td>
+                            <td>10</td>
+                            <td>Paid</td>
+                            <td><span class="status inProgress">In Progress</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>Mie Gacoan</td>
+                            <td>Rp 13.789</td>
+                            <td>10</td>
+                            <td>Due</td>
+                            <td><span class="status pending">Pending</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>Udang Rambutan</td>
+                            <td>Rp 13.789</td>
+                            <td>10</td>
+                            <td>Paid</td>
+                            <td><span class="status inProgress">In Progress</span></td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+            </div>
+
+            <!-- new cust -->
+            <div class="recentCustomers">
+                <div class="cardHeader">
+                    <a href="#">
+                        <h2>Recent Customer</h2>
+                    </a>
+                </div>
+
+                <table>
+                    <tr>
+                        <td width="60px">
+                            <div class="imgBx"><img src="fai.jpg" alt=""></div>
+                        </td>
+                        <td>
+                            <h4>Fairuz <br> <span>Surabaya</span></h4>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td width="60px">
+                            <div class="imgBx"><img src="fai.jpg" alt=""></div>
+                        </td>
+                        <td>
+                            <h4>Fairuz <br> <span>Surabaya</span></h4>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td width="60px">
+                            <div class="imgBx"><img src="fai.jpg" alt=""></div>
+                        </td>
+                        <td>
+                            <h4>Fairuz <br> <span>Surabaya</span></h4>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td width="60px">
+                            <div class="imgBx"><img src="fai.jpg" alt=""></div>
+                        </td>
+                        <td>
+                            <h4>Fairuz <br> <span>Surabaya</span></h4>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td width="60px">
+                            <div class="imgBx"><img src="fai.jpg" alt=""></div>
+                        </td>
+                        <td>
+                            <h4>Fairuz <br> <span>Surabaya</span></h4>
+                        </td>
+                    </tr>
+
+
+
+
+                </table>
+
+
+            </div>
+        </div>
+
+
+    </div> <!-- end main -->
+</div> <!-- end container -->
+
+<script src="https://unpkg.com/scrollreveal"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<!--Link to Js-->
+<script src="jsAdmin.js"></script>
+
+
+
+</body>
+
+</html>
