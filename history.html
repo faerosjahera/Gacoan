@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gacoan's Delivery | History</title>
+    <link rel="icon" href="img/logoGac.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link href="path/to/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style> -->
+</head>
+
+<body>
+    <header>
+        <a href="user.html" class="logo"><img src="img/logoGac.png" alt="Gacoan Logo"></a>
+
+        <ul class="navlist">
+            <li><a href="user.html">Home</a></li>
+            <li><a href="artikel.html">Artikel</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="history.html" class="active">History</a></li>
+        </ul>
+
+        <div class="nav-icons">
+            <a href="#"><i class='bx bx-search-alt'></i></a>
+            <a href="keranjang.html"><i class='bx bx-cart'></i></a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+    </header>
+
+
+    <section>
+        <div class="container">
+            <div class="cart-text">
+                <h2>Your History</h2>
+            </div>
+
+            <div class="nav-tabs" style="text-align: center;">
+                <button class="tab-link active" data-tab="sudah-bayar">Sudah Bayar</button>
+                <button class="tab-link" data-tab="dalam-perjalanan">Dalam Perjalanan</button>
+                <button class="tab-link" data-tab="sudah-selesai">Sudah Selesai</button>
+            </div>
+
+            <div id="sudah-bayar" class="status-section active">
+                <h3>Sudah Bayar</h3>
+                <!-- Contoh div order -->
+                <div class="order">
+                    <p>No: 007</p>
+                    <p>Tanggal: 2024-06-09</p>
+                    <p>Produk:</p>
+                    <ul class="product-list">
+                        <li class="product-item">
+                            <img src="img/pink_udangk.png" alt="Snack 4" class="product-image">
+                            <span class="product-name">Udang Keju (2x)</span>
+                        </li>
+                        <li class="product-item">
+                            <img src="img/udangR.png" alt="Snack 5" class="product-image">
+                            <span class="product-name">Udang Rambutan (1x)</span>
+                        </li>
+                    </ul>
+                    <p>Jumlah: 3</p>
+                    <p>Total Harga: Rp. 37,035</p>
+                    <p>Status: Sudah Bayar</p>
+                    <!-- <button class="beli-lagi">Beli Lagi</button> -->
+                </div>
+                <!-- End contoh div order -->
+            </div>
+
+            <div id="dalam-perjalanan" class="status-section">
+                <h3>Dalam Perjalanan</h3>
+                <!-- Contoh div order -->
+                <div class="order">
+                    <p>No: 006</p>
+                    <p>Tanggal: 2024-06-09</p>
+                    <p>Produk:</p>
+                    <ul class="product-list">
+                        <li class="product-item">
+                            <img src="img/pink_udangk.png" alt="Snack 4" class="product-image">
+                            <span class="product-name">Udang Keju (2x)</span>
+                        </li>
+                        <li class="product-item">
+                            <img src="img/udangR.png" alt="Snack 5" class="product-image">
+                            <span class="product-name">Udang Rambutan (1x)</span>
+                        </li>
+                    </ul>
+                    <p>Jumlah: 3</p>
+                    <p>Total Harga: Rp. 37,035</p>
+                    <p>Status: Dalam Perjalanan</p>
+                    <!-- <button class="beli-lagi">Beli Lagi</button> -->
+                </div>
+            </div>
+
+            <div id="sudah-selesai" class="status-section">
+                <h3>Sudah Selesai</h3>
+                <!-- Contoh div order -->
+                <div class="order">
+                    <p>No: 001</p>
+                    <p>Tanggal: 2024-06-09</p>
+                    <p>Produk:</p>
+                    <ul class="product-list">
+                        <li class="product-item">
+                            <img src="img/pink_udangk.png" alt="Snack 4" class="product-image">
+                            <span class="product-name">Udang Keju (2x)</span>
+                        </li>
+                        <li class="product-item">
+                            <img src="img/udangR.png" alt="Snack 5" class="product-image">
+                            <span class="product-name">Udang Rambutan (1x)</span>
+                        </li>
+                    </ul>
+                    <p>Jumlah: 3</p>
+                    <p>Total Harga: Rp. 37,035</p>
+                    <p>Status: Sudah Selesai</p>
+                    <button class="beli-lagi" onclick="window.location.href='menu.html'">Beli Lagi</button>
+
+                </div>
+
+                <div class="order">
+                    <p>No: 002</p>
+                    <p>Tanggal: 2024-06-09</p>
+                    <p>Produk:</p>
+                    <ul class="product-list">
+                        <li class="product-item">
+                            <img src="img/pink_udangk.png" alt="Snack 4" class="product-image">
+                            <span class="product-name">Udang Keju (2x)</span>
+                        </li>
+                        <li class="product-item">
+                            <img src="img/udangR.png" alt="Snack 5" class="product-image">
+                            <span class="product-name">Udang Rambutan (1x)</span>
+                        </li>
+                    </ul>
+                    <p>Jumlah: 3</p>
+                    <p>Total Harga: Rp. 37,035</p>
+                    <p>Status: Sudah Selesai</p>
+                    <button class="beli-lagi" onclick="window.location.href='menu.html'">Beli Lagi</button>
+
+                </div>
+
+                <div class="order">
+                    <p>No: 003</p>
+                    <p>Tanggal: 2024-06-09</p>
+                    <p>Produk:</p>
+                    <ul class="product-list">
+                        <li class="product-item">
+                            <img src="img/pink_udangk.png" alt="Snack 4" class="product-image">
+                            <span class="product-name">Udang Keju (2x)</span>
+                        </li>
+                        <li class="product-item">
+                            <img src="img/udangR.png" alt="Snack 5" class="product-image">
+                            <span class="product-name">Udang Rambutan (1x)</span>
+                        </li>
+                    </ul>
+                    <p>Jumlah: 3</p>
+                    <p>Total Harga: Rp. 37,035</p>
+                    <p>Status: Sudah Selesai</p>
+                    <button class="beli-lagi" onclick="window.location.href='menu.html'">Beli Lagi</button>
+
+                </div>
+
+                <div class="order">
+                    <p>No: 004</p>
+                    <p>Tanggal: 2024-06-09</p>
+                    <p>Produk:</p>
+                    <ul class="product-list">
+                        <li class="product-item">
+                            <img src="img/pink_udangk.png" alt="Snack 4" class="product-image">
+                            <span class="product-name">Udang Keju (2x)</span>
+                        </li>
+                        <li class="product-item">
+                            <img src="img/udangR.png" alt="Snack 5" class="product-image">
+                            <span class="product-name">Udang Rambutan (1x)</span>
+                        </li>
+                    </ul>
+                    <p>Jumlah: 3</p>
+                    <p>Total Harga: Rp. 37,035</p>
+                    <p>Status: Sudah Selesai</p>
+                    <button class="beli-lagi" onclick="window.location.href='menu.html'">Beli Lagi</button>
+
+                </div>
+
+                <div class="order">
+                    <p>No: 005</p>
+                    <p>Tanggal: 2024-06-09</p>
+                    <p>Produk:</p>
+                    <ul class="product-list">
+                        <li class="product-item">
+                            <img src="img/pink_udangk.png" alt="Snack 4" class="product-image">
+                            <span class="product-name">Udang Keju (2x)</span>
+                        </li>
+                        <li class="product-item">
+                            <img src="img/udangR.png" alt="Snack 5" class="product-image">
+                            <span class="product-name">Udang Rambutan (1x)</span>
+                        </li>
+                    </ul>
+                    <p>Jumlah: 3</p>
+                    <p>Total Harga: Rp. 37,035</p>
+                    <p>Status: Sudah Selesai</p>
+                    <button class="beli-lagi" onclick="window.location.href='menu.html'">Beli Lagi</button>
+
+                </div>
+                <!-- End contoh div order -->
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="artikel.html">Artikel</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="#history">History</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></a>
+                </div>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Info</h3>
+                <p><i class='bx bxs-map'></i> Surabaya, Indonesia</p>
+                <p><i class='bx bxs-phone'></i> 082142800106</p>
+                <p><i class='bx bxs-envelope'></i> info@gacoan.com</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll Top -->
+    <a href="#" class="scroll">
+        <i class='bx bx-up-arrow-alt'></i>
+    </a>
+    <script src="js/script.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const tabLinks = document.querySelectorAll('.tab-link');
+            const sections = document.querySelectorAll('.status-section');
+
+            tabLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    tabLinks.forEach(link => link.classList.remove('active'));
+                    sections.forEach(section => section.classList.remove('active'));
+                    const activeTab = link.getAttribute('data-tab');
+                    link.classList.add('active');
+                    document.getElementById(activeTab).classList.add('active');
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>

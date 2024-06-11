@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gacoan's Delivery Keranjang</title>
-    <link rel="stylesheet" href="styleAdmin.css">
+    <title>Admin Gacoan's Delivery</title>
+    <link rel="icon" href="img/logoputih.png" type="image/png">
+    <link rel="stylesheet" href="css/styleAdmin.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link href="path/to/bootstrap.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,11 +24,12 @@
             <li>
                 <a href="#">
                     <span class="icon">
-                        <ion-icon name="fast-food"></ion-icon>
-                    </span>
-                    <span class="tittle">Gacoan</span>
+                        <img src="img/logoputih.png" alt="Gacoan" class="nav-icon">
+                    </span>  
+                    <span class="title">Gacoan</span>
                 </a>
             </li>
+            
 
             <li>
                 <a href="dashboard.html">
@@ -39,7 +41,7 @@
             </li>
 
             <li>
-                <a href="#">
+                <a href="admUser.html">
                     <span class="icon">
                         <ion-icon name="people-outline"></ion-icon>
                     </span>
@@ -48,7 +50,7 @@
             </li>
 
             <li>
-                <a href="#">
+                <a href="admArtikel.html">
                     <span class="icon">
                         <ion-icon name="laptop-outline"></ion-icon>
                     </span>
@@ -57,7 +59,7 @@
             </li>
 
             <li>
-                <a href="#">
+                <a href="product.html">
                     <span class="icon">
                         <i class='bx bx-bowl-hot'></i>
                     </span>
@@ -89,13 +91,13 @@
                 </label>
             </div>
             <div class="user">
-                <img src="fai.jpg" alt="">
+                <img src="img/fai.jpg" alt="">
             </div>
         </div>
 
         <!-- Cards -->
         <div class="cardBox">
-            <a href="#">
+            <a href="admUser.html">
                 <div class="card">
                     <div>
                         <div class="numbers">1,504</div>
@@ -108,7 +110,7 @@
                 </div>
             </a>
 
-            <a href="#">
+            <a href="product.html">
                 <div class="card">
 
                     <div>
@@ -138,9 +140,9 @@
         </div> <!-- end card -->
 
         <!-- order -->
-        <div class="details">
-            <div class="recentOrders">
-                <div class="cardHeader">
+        <div class="dashDetails">
+            <div class="dashRecentOrders">
+                <div class="dashCardHeader">
                     <h2>Recent Orders</h2>
                     <a href="transaction.html" class="btn">View All</a>
                 </div>
@@ -188,6 +190,21 @@
                             <td><span class="status inProgress">In Progress</span></td>
                         </tr>
 
+                        <tr>
+                            <td>Udang Rambutan</td>
+                            <td>Rp 13.789</td>
+                            <td>10</td>
+                            <td>Paid</td>
+                            <td><span class="status delivered">Delivered</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>Mie Gacoan</td>
+                            <td>Rp 13.789</td>
+                            <td>10</td>
+                            <td>Due</td>
+                            <td><span class="status delivered">Delivered</span></td>
+                        </tr>
                     </tbody>
 
                 </table>
@@ -196,7 +213,7 @@
             <!-- new cust -->
             <div class="recentCustomers">
                 <div class="cardHeader">
-                    <a href="#">
+                    <a href="admUser.html">
                         <h2>Recent Customer</h2>
                     </a>
                 </div>
@@ -204,7 +221,7 @@
                 <table>
                     <tr>
                         <td width="60px">
-                            <div class="imgBx"><img src="fai.jpg" alt=""></div>
+                            <div class="imgBx"><img src="img/fai.jpg" alt=""></div>
                         </td>
                         <td>
                             <h4>Fairuz <br> <span>Surabaya</span></h4>
@@ -213,7 +230,7 @@
 
                     <tr>
                         <td width="60px">
-                            <div class="imgBx"><img src="fai.jpg" alt=""></div>
+                            <div class="imgBx"><img src="img/fai.jpg" alt=""></div>
                         </td>
                         <td>
                             <h4>Fairuz <br> <span>Surabaya</span></h4>
@@ -222,7 +239,7 @@
 
                     <tr>
                         <td width="60px">
-                            <div class="imgBx"><img src="fai.jpg" alt=""></div>
+                            <div class="imgBx"><img src="img/fai.jpg" alt=""></div>
                         </td>
                         <td>
                             <h4>Fairuz <br> <span>Surabaya</span></h4>
@@ -231,7 +248,7 @@
 
                     <tr>
                         <td width="60px">
-                            <div class="imgBx"><img src="fai.jpg" alt=""></div>
+                            <div class="imgBx"><img src="img/fai.jpg" alt=""></div>
                         </td>
                         <td>
                             <h4>Fairuz <br> <span>Surabaya</span></h4>
@@ -240,7 +257,7 @@
 
                     <tr>
                         <td width="60px">
-                            <div class="imgBx"><img src="fai.jpg" alt=""></div>
+                            <div class="imgBx"><img src="img/fai.jpg" alt=""></div>
                         </td>
                         <td>
                             <h4>Fairuz <br> <span>Surabaya</span></h4>
@@ -264,7 +281,7 @@
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 <!--Link to Js-->
-<script src="jsAdmin.js"></script>
+<script src="js/jsAdmin.js"></script>
 
 
 

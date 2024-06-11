@@ -1,31 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gacoan's Delivery Keranjang</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Gacoan's Delivery | Mie Gacoan</title>
+    <link rel="icon" href="img/logoGac.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 
 </head>
+
 <body>
     <header>
-        <a href="#" class="logo"><i class='bx bxs-home'></i>Gacoan</a>
+        <a href="user.html" class="logo"><img src="img/logoGac.png" alt="Gacoan Logo"></a>
 
         <ul class="navlist">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="menu.html">Menu</a></li>
-            <li><a href="#history">History</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="user.html">Home</a></li>
+            <li><a href="artikel.html">About</a></li>
+            <li><a href="menu.html" class="active">Menu</a></li>
+            <li><a href="history.html">History</a></li>
         </ul>
 
         <div class="nav-icons">
-            <a href="#"><i class='bx bx-search-alt' ></i></a>
-            <a href="keranjang.html" class="active"><i class='bx bx-cart' ></i></a>
+            <a href="#"><i class='bx bx-search-alt'></i></a>
+            <a href="keranjang.html" class="active"><i class='bx bx-cart'></i></a>
             <div class="bx bx-menu" id="menu-icon"></div>
         </div>
     </header>
@@ -34,40 +38,40 @@
         <div class="flex-box">
             <div class="left">
                 <div class="big-img">
-                    <img src="udang.png">
+                    <img src="img/gacoanP.png">
                 </div>
-                <div class="images">
+                <!-- <div class="images">
                     <div class="small-img">
-                        <img src="udang.png" onclick="showImg(this.src)">
+                        <img src="img/udang.png" onclick="showImg(this.src)">
                     </div>
                     <div class="small-img">
-                        <img src="udangk.png" onclick="showImg(this.src)">
+                        <img src="img/udangk.png" onclick="showImg(this.src)">
                     </div>
                     <div class="small-img">
-                        <img src="pink_udangk.png" onclick="showImg(this.src)">
+                        <img src="img/pink_udangk.png" onclick="showImg(this.src)">
                     </div>
-                </div>
+                </div> -->
             </div>
 
             <div class="right" style="margin-top: 60px;">
-                <div class="url">Home > Menu > Mie Gacoan </div>
+                <!-- <div class="url">Home > Menu > Mie Gacoan </div> -->
                 <div class="pname">Mie Gacoan</div>
                 <div class="ratings">
                     <i class='bx bxs-star'></i>
                     <i class='bx bxs-star'></i>
                     <i class='bx bxs-star'></i>
                     <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star-half' ></i>
+                    <i class='bx bxs-star-half'></i>
                 </div>
-                <div class="price2">Rp.13.567</div>
+                <div class="price2">Rp.15.678</div>
                 <div class="level">
                     <p>Level:</p>
-                    <div class="plevel">Lvl 1</div>
-                    <div class="plevel">Lvl 2</div>
-                    <div class="plevel">Lvl 3</div>
-                    <div class="plevel">Lvl 4</div>
-                    <div class="plevel">Lvl 6</div>
-                    <div class="plevel">Lvl 8</div>
+                    <div class="plevel" onclick="selectLevel(this)">Lvl 1</div>
+                    <div class="plevel" onclick="selectLevel(this)">Lvl 2</div>
+                    <div class="plevel" onclick="selectLevel(this)">Lvl 3</div>
+                    <div class="plevel" onclick="selectLevel(this)">Lvl 4</div>
+                    <div class="plevel" onclick="selectLevel(this)">Lvl 6</div>
+                    <div class="plevel" onclick="selectLevel(this)">Lvl 8</div>
                 </div>
                 <div class="quantity">
                     <p>Quantity :</p>
@@ -79,8 +83,8 @@
                     </p>
                 </div>
                 <div class="btn-box">
-                    <button class="cart-btn">Add to Cart</button>
-                    <button class="buy-btn">Buy Now !</button>
+                    <button class="cart-btn" onclick="addToCart()">Add to Cart</button>
+                    <!-- <button class="buy-btn">Buy Now !</button> -->
                 </div>
             </div>
         </div>
@@ -94,14 +98,14 @@
 
         <div class="menu-content">
             <div class="rowmenu">
-                <img src="udangk.png">
-                <h3>Udang Keju</h3>
+                <img src="img/suit.png">
+                <h3>Mie Suit</h3>
                 <p>
-                    Dimsum imut nan gendud ini berisi potongan keju di dalamnya.
+                    Semangkuk kelezatan mie dipadukan dgn bumbu racikan rahasia yg super nikmat.
                 </p>
                 <div class="in-text">
                     <div class="price">
-                        <h6>Rp.14.678</h6>
+                        <h6>Rp.15.678</h6>
                     </div>
                     <div class="s-btnn">
                         <a href="keranjang.html">Order Now</a>
@@ -109,19 +113,22 @@
                 </div>
 
                 <div class="top-icon">
-                    <a href="#"><i class='bx bx-heart' ></i></a>
+                    <a href="#">
+                        <i class='bx bx-heart'></i>
+                        <i class='bx bxs-heart'></i>
+                    </a>
                 </div>
             </div>
 
             <div class="rowmenu">
-                <img src="udang.png">
-                <h3>Udang Keju</h3>
+                <img src="img/gacoanP.png">
+                <h3>Mie Gacoan</h3>
                 <p>
-                    Dimsum imut nan gendud ini berisi potongan keju di dalamnya.
+                    Mie dengan rasa manis atau pedas manis buat kamu yang ingin mencoba sensasi pedas manis
                 </p>
                 <div class="in-text">
                     <div class="price">
-                        <h6>Rp.14.678</h6>
+                        <h6>Rp.15.678</h6>
                     </div>
                     <div class="s-btnn">
                         <a href="keranjang.html">Order Now</a>
@@ -129,19 +136,22 @@
                 </div>
 
                 <div class="top-icon">
-                    <a href="#"><i class='bx bx-heart' ></i></a>
+                    <a href="#">
+                        <i class='bx bx-heart'></i>
+                        <i class='bx bxs-heart'></i>
+                    </a>
                 </div>
             </div>
 
             <div class="rowmenu">
-                <img src="pink_udangk.png">
+                <img src="img/keju.png">
                 <h3>Udang Keju</h3>
                 <p>
                     Dimsum imut nan gendud ini berisi potongan keju di dalamnya.
                 </p>
                 <div class="in-text">
                     <div class="price">
-                        <h6>Rp.14.678</h6>
+                        <h6>Rp.12.345</h6>
                     </div>
                     <div class="s-btnn">
                         <a href="keranjang.html">Order Now</a>
@@ -149,19 +159,21 @@
                 </div>
 
                 <div class="top-icon">
-                    <a href="#"><i class='bx bx-heart' ></i></a>
+                    <a href="#">
+                        <i class='bx bx-heart'></i>
+                        <i class='bx bxs-heart'></i>
+                    </a>
                 </div>
             </div>
 
             <div class="rowmenu">
-                <img src="pink_udangk.png">
-                <h3>Udang Keju</h3>
+                <img src="img/slukubathok.png">
+                <h3>Es Sluku Bathok</h3>
                 <p>
-                    Dimsum imut nan gendud ini berisi potongan keju di dalamnya.
-                </p>
+                    Minuman es susu ditambah sirup mocca yang smooth
                 <div class="in-text">
                     <div class="price">
-                        <h6>Rp.14.678</h6>
+                        <h6>Rp.10.123</h6>
                     </div>
                     <div class="s-btnn">
                         <a href="keranjang.html">Order Now</a>
@@ -169,27 +181,76 @@
                 </div>
 
                 <div class="top-icon">
-                    <a href="#"><i class='bx bx-heart' ></i></a>
+                    <a href="#">
+                        <i class='bx bx-heart'></i>
+                        <i class='bx bxs-heart'></i>
+                    </a>
                 </div>
             </div>
 
-        
+
 
         </div>
 
     </section>
 
-        <!---Scroll Top--->
-        <a href="#" class="scroll">
-            <i class='bx bx-up-arrow-alt'></i>
-        </a>
+        <!-- Footer -->
+        <footer>
+            <div class="footer-container">
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="artikel.html">Artikel</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="history.html">History</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class='bx bxl-instagram'></i></a>
+                        <a href="#"><i class='bx bxl-facebook'></i></a>
+                        <a href="#"><i class='bx bxl-twitter'></i></a>
+                    </div>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Info</h3>
+                    <p><i class='bx bxs-map'></i> Surabaya, Indonesia</p>
+                    <p><i class='bx bxs-phone'></i> 082142800106</p>
+                    <p><i class='bx bxs-envelope'></i> info@gacoan.com</p>
+                </div>
+            </div>
+        </footer>
 
-        <script src="https://unpkg.com/scrollreveal"></script>
-        
-        <!--Link to Js-->
-        <script src="script.js"></script>
+    <!---Scroll Top--->
+    <a href="#" class="scroll">
+        <i class='bx bx-up-arrow-alt'></i>
+    </a>
+
+    <script>
+        function addToCart() {
+            window.location.href = "keranjang.html";
+        }
+    </script>
+
+    <script>
+        function selectLevel(level) {
+            // Hapus kelas aktif dari semua elemen level
+            const allLevels = document.querySelectorAll('.plevel');
+            allLevels.forEach(item => {
+                item.classList.remove('active');
+            });
+
+            // Tambahkan kelas aktif ke level yang dipilih
+            level.classList.add('active');
+        }
+    </script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="js/script.js"></script>
 
 
 
 </body>
+
 </html>

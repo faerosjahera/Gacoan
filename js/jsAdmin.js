@@ -21,7 +21,7 @@ toggle.onclick = function() {
 
 
 document.addEventListener("DOMContentLoaded", function() {
-    const rowsPerPage = 8;
+    const rowsPerPage = 10;
     const table = document.getElementById("data-table");
     const tbody = table.querySelector("tbody");
     const rows = Array.from(tbody.querySelectorAll("tr"));
@@ -152,6 +152,70 @@ function confirmDelete(btn) {
         row.parentNode.removeChild(row);
     }
 }
+
+// ========================= ADD USER ========================= //
+
+// Get the modal
+var addUserModal = document.getElementById("addUserModal");
+
+// Function to open the modal
+function openAddUserModal() {
+    addUserModal.style.display = "block";
+}
+
+// Function to close the modal
+function closeAddUserModal() {
+    addUserModal.style.display = "none";
+}
+
+// Close the modal when the user clicks anywhere outside of it
+window.onclick = function(event) {
+    if (event.target == addUserModal) {
+        addUserModal.style.display = "none";
+    }
+}
+
+
+
+// ========================= SEE USER ========================= //
+document.addEventListener('DOMContentLoaded', (event) => {
+    const modal = document.getElementById("userDetailsModal");
+    const closeModal = document.getElementsByClassName("close-btn2")[0];
+
+    // Close the modal
+    closeModal.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // Close modal if user clicks outside of it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    // Add event listener to table rows
+    const table = document.getElementById("data-table-product");
+    table.addEventListener('click', function(e) {
+        const target = e.target.closest('tr');
+        if (target) {
+            const name = target.querySelector('td:nth-child(3)').innerText;
+            const address = target.querySelector('td:nth-child(4)').innerText;
+            const profileImage = target.querySelector('img').src;
+            const telp = target.querySelector('td:nth-child(5)').innerText;
+            const email = target.querySelector('td:nth-child(6)').innerText;
+
+            document.getElementById("modalName").innerText = name;
+            document.getElementById("modalAddress").innerText = address;
+            document.getElementById("modalProfileImage").src = profileImage;
+            document.getElementById("modalPhone").innerText = telp;
+            document.getElementById("modalEmail").innerText = email;
+
+            modal.style.display = "block";
+        }
+    });
+});
+
 
 
 // ========= MODAL EDIT ========== //
@@ -293,52 +357,36 @@ function addProduct() {
 
 // ========= MODAL ADD ARTICLE ========== //
 
-function showAddArticleModal() {
-    document.getElementById('addArticleModal').style.display = "block";
-}
-
+// Fungsi untuk menutup modal tambah artikel
 function closeAddArticleModal() {
-    document.getElementById('addArticleModal').style.display = "none";
+    var modal = document.getElementById("addArticleModal");
+    modal.style.display = "none";
 }
 
-document.getElementById('addArticleForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    addArticle();
+// Fungsi untuk membuka modal tambah artikel
+function openAddArticleModal() {
+    var modal = document.getElementById("addArticleModal");
+    modal.style.display = "block";
+}
+
+// Fungsi untuk menangani pengiriman formulir artikel baru
+document.getElementById("addArticleForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Mencegah formulir untuk melakukan submit default
+
+    // Ambil data dari formulir
+    var title = document.getElementById("articleTitle").value;
+    var date = document.getElementById("articleDate").value;
+    var text = document.getElementById("articleText").value;
+    var image = document.getElementById("articleImage").files[0];
+
+    // Lakukan operasi sesuai kebutuhan, seperti mengirim data ke server
+    // Di sini Anda dapat menambahkan kode untuk mengirim data artikel baru ke server
+
+    // Setelah berhasil menambahkan artikel, tutup modal
+    closeAddArticleModal();
 });
 
-function addArticle() {
-    const table = document.getElementById('data-table-article').getElementsByTagName('tbody')[0];
-    const newRow = table.insertRow();
-
-    const cell1 = newRow.insertCell(0);
-    const cell2 = newRow.insertCell(1);
-    const cell3 = newRow.insertCell(2);
-    const cell4 = newRow.insertCell(3);
-    const cell5 = newRow.insertCell(4);
-    const cell6 = newRow.insertCell(5);
-
-    cell1.innerText = table.rows.length + 1;
-
-    const img = document.createElement('img');
-    img.src = URL.createObjectURL(document.getElementById('articleImage').files[0]);
-    cell2.appendChild(img);
-
-    cell3.innerText = document.getElementById('articleTitle').value;
-    cell4.innerText = document.getElementById('articleDate').value;
-    cell5.innerText = document.getElementById('articleText').value;
-    cell6.innerHTML = `
-        <button class="see-btn"><ion-icon name="eye"></ion-icon></button>
-        <button class="edit-btn">Edit</button>
-        <button class="delete-btn" onclick="confirmDelete(this)">Delete</button>
-    `;
-
-    document.getElementById('addArticleForm').reset();
+// Event listener untuk menutup modal ketika tombol close diklik
+document.querySelector(".close-btn2").addEventListener("click", function() {
     closeAddArticleModal();
-}
-
-// function confirmDelete(button) {
-//     if (confirm('Are you sure you want to delete this article?')) {
-//         const row = button.closest('tr');
-//         row.parentNode.removeChild(row);
-//     }
-// }
+});

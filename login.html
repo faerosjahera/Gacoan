@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gacoan's Delivery</title>
-    <link rel="stylesheet" href="login.css">
+    <title>Gacoan's Delivery | Login </title>
+    <link rel="icon" href="img/logoGac.png" type="image/png">
+    <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,161 +14,150 @@
 </head>
 <body>
 
-        <!-- <header>
-            <a href="#" class="logo"><i class='bx bxs-home'></i>Gacoan</a>
-            <ul class="navlist">
-                <li><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#history">History</a></li>
-                <li><a href="#contact">Contact</a></li>
+<div class="wrapper">    
+    <nav class="nav">
+        <div class="nav-logo">
+            <a href="index.html" class="logo"><img src="img/logoGac.png" alt="Gacoan Logo"></a>
+        </div>
+        <div class="nav-menu" id="navMenu">
+            <ul>
+                <li><a href="#" class="link active">Home</a></li> 
+                <li><a href="#" class="link">About</a></li>
+                <!-- <li><a href="#" class="link">Article</a></li> -->
+                <li><a href="#" class="link">Contact</a></li>  
             </ul>
-    
-            <div class="nav-button">
-                <button class="btnlog login" id="loginBtn">Sign In</button>
-                <button class="btnlog" id="registerBtn">Sign Up</button>
+        </div>
+        <div class="nav-button">
+            <button class="btn pink-btn" id="loginBtn" onclick="login()">Sign In</button>
+            <button class="btn" id="registerBtn" onclick="register()">Sign Up</button>
+        </div>
+        <div class="nav-menu-btn">
+            <i class='bx bx-menu' onclick="myMenuFunction()" ></i>
+        </div>
+    </nav>
+
+    <div class="form-box">
+        <div class="login-container" id="login">
+            <div class="top">
+                <span>Don't Have an account? <a href="#" onclick="register()">Sign Up</a></span>
+                <header>Sign In</header>
             </div>
-
-            <div class="nav-menu-btn">
-                <i class='bx bx-menu'></i>
+            <div class="input-box">
+                <input type="email" class="input-field" id="email" placeholder="Email">
+                <i class='bx bx-user' ></i>
             </div>
-        </header> -->
-            <div class="wrapper">    
-                <nav class="nav">
-                    <div class="nav-logo">
-                        <p><i class='bx bxs-home'></i> Gacoan</p>
-                    </div>
-                    <div class="nav-menu" id="navMenu">
-                        <ul>
-                        <li><a href="#" class="link active">Home</a></li> 
-                        <li><a href="#" class="link">About</a></li>
-                        <!-- <li><a href="#" class="link">Article</a></li> -->
-                        <li><a href="#" class="link">Contact</a></li>  
-                        </ul>
-                    </div>
-                    <div class="nav-button">
-                        <button class="btn pink-btn" id="loginBtn" onclick="login()">Sign In</button>
-                        <button class="btn" id="registerBtn" onclick="register()">Sign Up</button>
-                    </div>
-                    <div class="nav-menu-btn">
-                        <i class='bx bx-menu' onclick="myMenuFunction()" ></i>
-                    </div>
-                </nav>
-
-                
-                <div class="form-box">
-
-                    <div class="login-container" id="login">
-                        <div class="top">
-                            <span>Don't Have an account? <a href="#" onclick="register()">Sign Up</a></span>
-                            <header>Login</header>
-                        </div>
-                        <div class="input-box">
-                            <input type="email" class="input-field" placeholder="Email">
-                            <i class='bx bx-user' ></i>
-                        </div>
-                        <div class="input-box">
-                            <input type="password" class="input-field" placeholder="Password">
-                            <i class='bx bx-lock' ></i>
-                        </div>
-                        <div class="input-box">
-                            <a href="user.html"><input type="submit" class="submit" value="Sign In"></a>
-                        </div>
-                        <div class="two-col">
-                            <div class="one">
-                                <input type="checkbox" id="login-check">
-                                <label for="login-check">Remember Me</label>
-                            </div>
-                            <div class="two">
-                                <label><a href="#">Forgot Password?</a></label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="register-container" id="register">
-                        <div class="top">
-                            <span>Have an account? <a href="#" onclick="login()">Login</a></span>
-                            <header>Sign In</header>
-                        </div>
-                        <div class="two-forms">
-                            <div class="input-box">
-                                <input type="text" class="input-field" placeholder="Firstname">
-                                <i class='bx bx-user' ></i>
-                            </div>
-                            <div class="input-box">
-                                <input type="text" class="input-field" placeholder="Lastname">
-                                <i class='bx bx-user' ></i>
-                            </div>
-                        </div>
-                        <div class="input-box">
-                            <input type="email" class="input-field" placeholder="Email">
-                            <i class='bx bx-envelope' ></i>
-                        </div>
-                        <div class="input-box">
-                            <input type="password" class="input-field" placeholder="Password">
-                            <i class='bx bx-lock' ></i>
-                        </div>
-                        <div class="input-box">
-                            <input type="submit" class="submit" value="Register">
-                        </div>
-                        <div class="two-col">
-                            <div class="one">
-                                <input type="checkbox" id="register-check">
-                                <label for="register-check">Remember Me</label>
-                            </div>
-                            <div class="two">
-                                <label><a href="#">Terms & Conditions</a></label>
-                            </div>
-                        </div>
-                    </div>
+            <div class="input-box">
+                <input type="password" class="input-field" placeholder="Password">
+                <i class='bx bx-lock' ></i>
+            </div>
+            <div class="input-box">
+                <input type="submit" class="submit" value="Sign In" onclick="login2()">
+            </div>
+            <div class="two-col">
+                <div class="one">
+                    <input type="checkbox" id="login-check">
+                    <label for="login-check">Remember Me</label>
                 </div>
-        
+                <div class="two">
+                    <label><a href="#">Forgot Password?</a></label>
+                </div>
+            </div>
+        </div>
 
-            </div>  
-   
+        <div class="register-container" id="register">
+            <div class="top">
+                <span>Have an account? <a href="#" onclick="login()">Sign In</a></span>
+                <header>Sign Up</header>
+            </div>
+            <div class="two-forms">
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="Firstname">
+                    <i class='bx bx-user' ></i>
+                </div>
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="Lastname">
+                    <i class='bx bx-user' ></i>
+                </div>
+            </div>
+            <div class="input-box">
+                <input type="email" class="input-field" id="email" placeholder="Email">
+                <i class='bx bx-envelope' ></i>
+            </div>
+            <div class="input-box">
+                <input type="password" class="input-field" placeholder="Password">
+                <i class='bx bx-lock' ></i>
+            </div>
+            <div class="input-box">
+                <input type="submit" class="submit" value="Register" onclick="login()">
+            </div>
+            <div class="two-col">
+                <div class="one">
+                    <input type="checkbox" id="register-check">
+                    <label for="register-check">Remember Me</label>
+                </div>
+                <div class="two">
+                    <label><a href="#">Terms & Conditions</a></label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>  
 
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <!--Link to Js-->
-    <script src="script.js"></script>
+<!--Link to Js-->
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="js/script.js"></script>
+<script>
+    function myMenuFunction() {
+    var i = document.getElementById("navMenu");
 
-    <script>
-         function myMenuFunction(){
-            var i = document.getElementById("navMenu");
+    if (i.className === "nav-menu") {
+        i.className += " responsive";
+    } else {
+        i.className = "nav-menu";
+    }
+}
 
-            if(i.className === "nav-menu") {
-                i.className += " responsive";
-            } else {
-                i.className = "nav-menu";
-            }
-        }
-    </script>    
+var a = document.getElementById("loginBtn");
+var b = document.getElementById("registerBtn");
+var x = document.getElementById("login");
+var y = document.getElementById("register");
 
-    <script>
-        var a = document.getElementById("loginBtn");
-        var b = document.getElementById("registerBtn");
-        var x = document.getElementById("login");
-        var y = document.getElementById("register");
+function login() {
+    x.style.left = "4px";
+    y.style.right = "-520px";
+    a.className += " pink-btn";
+    b.className = "btn";
+    x.style.opacity = 1;
+    y.style.opacity = 0;
+}
 
-        function login(){
-            x.style.left = "4px";
-            y.style.right = "-520px";
-            a.className += " pink-btn";
-            b.className = "btn";
-            x.style.opacity = 1;
-            y.style.opacity = 0;
-        }
+function register() {
+    x.style.left = "-510px";
+    y.style.right = "5px";
+    a.className = "btn";
+    b.className += " pink-btn";
+    x.style.opacity = 0;
+    y.style.opacity = 1;
+}
 
-        function register(){
-            x.style.left = "-510px";
-            y.style.right = "5px";
-            a.className = "btn";
-            b.className += " pink-btn";
-            x.style.opacity = 0;
-            y.style.opacity = 1;
-        }
-    </script>
+function login2() {
+    var email = document.getElementById("email").value;
 
+    // Periksa apakah input email tidak kosong
+    if (email.trim() === '') {
+        alert("Please enter your email.");
+        return; // Jika kosong, hentikan proses login
+    }
 
-
+    // Cek apakah email mengandung '@admin'
+    if (email.includes('@admin')) {
+        // Jika iya, redirect ke halaman admin
+        window.location.href = "dashboard.html";
+    } else {
+        // Jika tidak, redirect ke halaman pengguna biasa
+        window.location.href = "user.html";
+    }
+}
+</script>
 </body>
 </html>

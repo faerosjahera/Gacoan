@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gacoan's Delivery Keranjang</title>
-    <link rel="stylesheet" href="styleAdmin.css">
+    <title>Admin Gacoan's Delivery | User</title>
+    <link rel="icon" href="img/logoputih.png" type="image/png">
+    <link rel="stylesheet" href="css/styleAdmin.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link href="path/to/bootstrap.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,9 +24,9 @@
             <li>
                 <a href="#">
                     <span class="icon">
-                        <ion-icon name="fast-food"></ion-icon>
+                        <img src="img/logoputih.png" alt="Gacoan" class="nav-icon">
                     </span>
-                    <span class="tittle">Gacoan</span>
+                    <span class="title">Gacoan</span>
                 </a>
             </li>
 
@@ -39,7 +40,7 @@
             </li>
 
             <li>
-                <a href="#">
+                <a href="admUser.html">
                     <span class="icon">
                         <ion-icon name="people-outline"></ion-icon>
                     </span>
@@ -48,7 +49,7 @@
             </li>
 
             <li>
-                <a href="#">
+                <a href="admArtikel.html">
                     <span class="icon">
                         <ion-icon name="laptop-outline"></ion-icon>
                     </span>
@@ -89,13 +90,13 @@
                 </label>
             </div>
             <div class="user">
-                <img src="fai.jpg" alt="">
+                <img src="img/fai.jpg" alt="">
             </div>
         </div>
 
         <!-- Cards -->
         <div class="cardBox">
-            <a href="#">
+            <a href="admUser.html">
                 <div class="card">
                     <div>
                         <div class="numbers">1,504</div>
@@ -140,6 +141,7 @@
             <div class="recentOrders">
                 <div class="cardHeader">
                     <h2>Data User</h2>
+                    <button class="add-user-btn" onclick="openAddUserModal()">Add New User</button>
                     <!-- <a href="#" class="btn">View All</a> -->
                 </div>
                 <table id="data-table-product">
@@ -149,17 +151,19 @@
                             <td>Profile</td>
                             <td>Name</td>
                             <td>Address</td>
-                            <!-- <td>Action</td> -->
-
+                            <td>Telp</td>
+                            <td>Email</td>
                         </tr>
                     </thead>
 
                     <tbody>
                         <tr>
                             <td></td>
-                            <td><img src="fai.jpg"></td>
-                            <td>Fairuz Zahira</td>
+                            <td><img src="img/vq.png" class="profile"></td>
+                            <td>Fiqhi Nadya</td>
                             <td>Surabaya</td>
+                            <td>3456776543</td>
+                            <td>Fiqi@gmail.com</td>
                             <!-- <td>
                                 <button class="edit-btn">Edit</button>
                                 <button class="delete-btn" onclick="deleteRow(this)">Delete</button>
@@ -168,9 +172,11 @@
 
                         <tr>
                             <td></td>
-                            <td><img src="fai.jpg"></td>
-                            <td>Fairuz Zahira</td>
+                            <td><img src="img/tangs.png" class="profile"></td>
+                            <td>Lintang Sekar</td>
                             <td>Surabaya</td>
+                            <td>3456776543</td>
+                            <td>Sekar@gmail.com</td>
                             <!-- <td>
                                 <button class="edit-btn">Edit</button>
                                 <button class="delete-btn" onclick="deleteRow(this)">Delete</button>
@@ -179,9 +185,11 @@
 
                         <tr>
                             <td></td>
-                            <td><img src="fai.jpg"></td>
+                            <td><img src="img/fae.png" class="profile"></td>
                             <td>Fairuz Zahira</td>
                             <td>Surabaya</td>
+                            <td>3456776543</td>
+                            <td>Fairuz@gmail.com</td>
                             <!-- <td>
                                 <button class="edit-btn">Edit</button>
                                 <button class="delete-btn" onclick="deleteRow(this)">Delete</button>
@@ -190,19 +198,86 @@
 
                         <tr>
                             <td></td>
-                            <td><img src="fai.jpg"></td>
-                            <td>Fairuz Zahira</td>
-                            <td>Surabaya</td>
+                            <td><img src="img/tanga.png" class="profile"></td>
+                            <td>Lintang Anggraeni</td>
+                            <td>Gresik</td>
+                            <td>3456776543</td>
+                            <td>Lintang@gmail.com</td>
                             <!-- <td>
                                 <button class="edit-btn">Edit</button>
                                 <button class="delete-btn" onclick="deleteRow(this)">Delete</button>
                             </td> -->
                         </tr>
 
-          
+                        <tr>
+                            <td></td>
+                            <td><img src="img/ratna.png" class="profile"></td>
+                            <td>Ratna Firdaus</td>
+                            <td>Gresik</td>
+                            <td>3456776543</td>
+                            <td>Ratna@gmail.com</td>
+                            <!-- <td>
+                                <button class="edit-btn">Edit</button>
+                                <button class="delete-btn" onclick="deleteRow(this)">Delete</button>
+                            </td> -->
+                        </tr>
+
+                        <tr>
+                            <td></td>
+                            <td><img src="img/salma.png" class="profile"></td>
+                            <td>Salma Aida</td>
+                            <td>Surabaya</td>
+                            <td>3456776543</td>
+                            <td>Salma@gmail.com</td>
+                            <!-- <td>
+                                <button class="edit-btn">Edit</button>
+                                <button class="delete-btn" onclick="deleteRow(this)">Delete</button>
+                            </td> -->
+                        </tr>
+
                     </tbody>
                 </table>
             </div>
+
+            <!-- Modal -->
+
+            <!-- Modal -->
+            <div id="userDetailsModal" class="modal">
+                <div class="modal-content">
+                    <span class="close-btn2" onclick="closeUserDetailsModal()">&times;</span>
+                    <h2>User Details</h2>
+                    <div id="userDetails" class="flex-container">
+                        <img id="modalProfileImage" src="" alt="Profile Image" class="profile">
+                        <div class="details">
+                            <p><strong>Name:</strong> <span id="modalName"></span></p>
+                            <p><strong>Address:</strong> <span id="modalAddress"></span></p>
+                            <p><strong>Phone:</strong> <span id="modalPhone"></span></p>
+                            <p><strong>Email:</strong> <span id="modalEmail"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+            
+            <div id="addUserModal" class="new-modal">
+                <div class="new-modal-content">
+                    <span class="new-close-btn" onclick="closeAddUserModal()">&times;</span>
+                    <h2>Add New User</h2>
+                    <form id="addUserForm">
+                        <label for="userProfileImage">Profile Image:</label>
+                        <input type="file" id="userProfileImage" name="userProfileImage" accept="image/*" required>
+                        <label for="userName">Name:</label>
+                        <input type="text" id="userName" name="userName" required>
+                        <label for="userAddress">Address:</label>
+                        <input type="text" id="userAddress" name="userAddress" required>
+                        <label for="userTelp">Telp:</label>
+                        <input type="tel" id="userTelp" name="userTelp" required>
+                        <label for="userEmail">Email:</label>
+                        <input type="email" id="userEmail" name="userEmail" required>
+                        <button type="submit">Add User</button>
+                    </form>
+                </div>
+            </div>
+            
 
             <div id="pagination"></div>
         </div>
@@ -215,7 +290,7 @@
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 <!--Link to Js-->
-<script src="jsAdmin.js"></script>
+<script src="js/jsAdmin.js"></script>
 
 
 
